@@ -1,0 +1,33 @@
+const arr = [
+    [
+        [0, 1, 0],
+        [1, 0, 1],
+        [0, 1, 0]
+    ],
+    [
+        [1, 0, 1],
+        [0, 1, 0],
+        [1, 0, 1]
+    ],
+    [
+        [0, 1, 0],
+        [1, 0, 1],
+        [0, 1, 0]
+    ], 0, 1, 0
+]
+
+function countZero(arr) {
+    let count = 0
+    arr.forEach((element) => {
+        if (Array.isArray(element)) {
+            count += countZero(element)
+        } else {
+            if (element === 0) count++
+        }
+    })
+    return count
+}
+
+
+console.log(countZero(arr))
+

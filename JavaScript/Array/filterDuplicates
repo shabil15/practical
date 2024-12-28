@@ -1,0 +1,10 @@
+function filterOutDuplicates (arr){
+    const count = {};
+    for(const item of arr){
+        count[item] = (count[item] || 0) + 1; 
+    }
+    return arr.filter(item => count[item]==1);
+}
+
+const arr = [213,435,455,656,6778,213,435,455,656,67]
+console.log(filterOutDuplicates(arr));
