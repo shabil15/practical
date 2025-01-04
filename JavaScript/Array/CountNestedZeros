@@ -16,6 +16,8 @@ const arr = [
     ], 0, 1, 0
 ]
 
+
+
 function countZero(arr) {
     let count = 0
     arr.forEach((element) => {
